@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <header id="header" class="header-tops">
+      <div class="container">
+        <div class="logo">
+          <img src="assets/img/LOGO.png" alt="Logo">
+          <div>
+          <p class="name">My Portfolio</p>
+          <p class="desc">Front-End Development</p>
+        </div>
+      </div>
+  
+      <nav class="navigation">
+          <!--<span class="navbar-toggle" id="js-navbar-toggle">
+              <i class="fas fa-bars"></i>
+          </span>-->
+          <ul class="main-nav" id="js-menu">
+            <li><a href="#" class="nav-links">Home</a></li>
+            <li><a href="#" class="nav-links">About</a></li>
+            <li><a href="#" class="nav-links">Projects</a></li>
+            <li><a href="#" class="nav-links">Contact</a></li>
+          </ul>
+          <div class="toggle_btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </nav>
+        <div class="dropdown_menu">
+          <li><a href="#" class="nav-link2">Home</a></li>
+          <li><a href="#" class="nav-link2">About</a></li>
+          <li><a href="#" class="nav-link2">Projects</a></li>
+          <li><a href="#" class="nav-link2">Contact</a></li>
+      </div>
+
+
+      </header>
+
+      <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+      
+        toggleBtn.onclick = function () {
+          dropDownMenu.classList.toggle('open')
+          const isOpen = dropDownMenu.classList.contains('open')
+      
+          toggleBtnIcon.classList = isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars'
+        }
+      </script>
+</body>
+</html>
